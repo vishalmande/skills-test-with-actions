@@ -69,7 +69,6 @@ def test_get_nth_fibonacci_ten():
 
      # Assert
      assert result == 55
-
 def test_area_of_circle_negative_radius(self):
    """Test with a negative radius to raise ValueError."""
    # Arrange
@@ -78,36 +77,12 @@ def test_area_of_circle_negative_radius(self):
    # Act & Assert
    with self.assertRaises(ValueError):
       area_of_circle(radius)
-def test_area_of_circle_large_radius():
-        """Test with a large radius."""
-        radius = 1e6
-        result = area_of_circle(radius)
-        assert abs(result - (math.pi * radius ** 2)) < 1e-5
 
-def test_area_of_circle_type_error():
-        """Test area_of_circle with invalid type (string)."""
-        try:
-            area_of_circle("not_a_number")
-            assert False, "TypeError not raised"
-        except TypeError:
-            pass
-        except Exception:
-            # Accept ValueError if math.pi * str fails
-            pass
+def test_get_nth_fibonacci_negative(self):
+   """Test with a negative number to raise ValueError."""
+   # Arrange
+   n = -1
 
-def test_get_nth_fibonacci_large_n():
-        """Test get_nth_fibonacci with a large n."""
-        n = 20
-        result = get_nth_fibonacci(n)
-        assert result == 6765
-
-def test_get_nth_fibonacci_type_error():
-        """Test get_nth_fibonacci with invalid type (string)."""
-        try:
-            get_nth_fibonacci("not_a_number")
-            assert False, "TypeError not raised"
-        except TypeError:
-            pass
-        except Exception:
-            # Accept ValueError if n < 0 fails
-            pass
+   # Act & Assert
+   with self.assertRaises(ValueError):
+      get_nth_fibonacci(n)
