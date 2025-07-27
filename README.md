@@ -1,4 +1,5 @@
 # Test with Actions
+[![Python Coverage](https://github.com/vishalmande/skills-test-with-actions/actions/workflows/python-coverage.yml/badge.svg?branch=main)](https://github.com/vishalmande/skills-test-with-actions/actions/workflows/python-coverage.yml)
 
 <img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
 
